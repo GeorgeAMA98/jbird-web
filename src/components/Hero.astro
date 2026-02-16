@@ -1,0 +1,151 @@
+---
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Nurturing Your Journey</h1>
+        <p class="hero-subtitle">Professional doula support for birth, postpartum, and beyond</p>
+        <p class="hero-description">
+          Welcome to JBird Nesting Services. I'm here to provide compassionate, 
+          evidence-based support throughout your pregnancy, birth, and postpartum journey.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get Started</a>
+          <a href="#services" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/hero-splash.svg" alt="Nesting design - layers of support" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, var(--cream) 0%, #F9F4EF 100%);
+    padding: 100px 0;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    color: var(--terracotta);
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--sage-green);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    margin-bottom: 40px;
+    line-height: 1.8;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .btn-primary {
+    background-color: var(--terracotta);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #B5694A;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(199, 123, 92, 0.3);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--terracotta);
+    border: 2px solid var(--terracotta);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--terracotta);
+    color: white;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+  }
+
+  @media (max-width: 968px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+    }
+
+    .hero-cta {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 60px 0;
+      min-height: auto;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+  }
+</style>

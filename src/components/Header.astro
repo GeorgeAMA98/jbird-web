@@ -1,0 +1,85 @@
+---
+---
+
+<header>
+  <nav class="header-nav">
+    <div class="container">
+      <div class="nav-content">
+        <a href="/" class="logo">
+          <span class="logo-icon">🐦</span>
+          <span class="logo-text">JBird Nesting</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .header-nav {
+    background-color: var(--cream);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--terracotta);
+  }
+
+  .logo-icon {
+    font-size: 1.8rem;
+  }
+
+  .logo-text {
+    font-family: Georgia, serif;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+
+  .nav-links a {
+    color: var(--dark-text);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--terracotta);
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      gap: 20px;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+    }
+  }
+</style>

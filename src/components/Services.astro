@@ -1,0 +1,161 @@
+---
+const services = [
+  {
+    title: "Birth Support",
+    icon: "🤱",
+    description: "Comprehensive support during your labor and delivery. I'll be by your side providing physical comfort, emotional encouragement, and advocacy to help you have the birth experience you envision.",
+    details: [
+      "Prenatal meetings to discuss your birth plan",
+      "Continuous support during labor",
+      "Comfort measures and positioning support",
+      "Partner and family support",
+      "Postpartum follow-up"
+    ]
+  },
+  {
+    title: "Postpartum Care",
+    icon: "💚",
+    description: "The fourth trimester is a crucial time for recovery and adjustment. I provide practical support, emotional guidance, and resources to help you navigate this new chapter with confidence.",
+    details: [
+      "Newborn care guidance",
+      "Recovery support",
+      "Emotional support and processing",
+      "Household assistance",
+      "Resource referrals"
+    ]
+  },
+  {
+    title: "Prenatal Education",
+    icon: "📚",
+    description: "Knowledge is power. I offer evidence-based education sessions to help you understand your options, prepare for birth, and make informed decisions about your care.",
+    details: [
+      "Birth planning sessions",
+      "Understanding your options",
+      "Comfort measure techniques",
+      "Newborn care basics",
+      "Postpartum preparation"
+    ]
+  },
+  {
+    title: "Lactation Support",
+    icon: "🍼",
+    description: "Breastfeeding support when you need it most. I provide guidance on positioning, latch, and troubleshooting common challenges to help you and your baby succeed.",
+    details: [
+      "Latch assessment and support",
+      "Positioning assistance",
+      "Troubleshooting common issues",
+      "Pumping guidance",
+      "Feeding plan development"
+    ]
+  }
+];
+---
+
+<section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">Services</h2>
+    <p class="section-subtitle">
+      Comprehensive doula support tailored to your unique needs
+    </p>
+    <div class="services-grid">
+      {services.map((service) => (
+        <div class="service-card">
+          <div class="service-icon">{service.icon}</div>
+          <h3 class="service-title">{service.title}</h3>
+          <p class="service-description">{service.description}</p>
+          <ul class="service-details">
+            {service.details.map((detail) => (
+              <li>{detail}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    background: linear-gradient(180deg, white 0%, var(--cream) 100%);
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .service-card {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .service-title {
+    font-size: 1.5rem;
+    color: var(--terracotta);
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .service-description {
+    color: var(--light-text);
+    margin-bottom: 20px;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  .service-details {
+    list-style: none;
+    padding: 0;
+  }
+
+  .service-details li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: var(--dark-text);
+    font-size: 0.95rem;
+  }
+
+  .service-details li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--sage-green);
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .service-card {
+      padding: 30px 20px;
+    }
+  }
+</style>

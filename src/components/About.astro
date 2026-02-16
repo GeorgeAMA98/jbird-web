@@ -1,0 +1,157 @@
+---
+---
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2 class="section-title">About Jaeda</h2>
+        <p class="about-intro">
+          Welcome! I'm Jaeda, a certified doula dedicated to supporting families 
+          through one of life's most transformative experiences.
+        </p>
+        <p>
+          My approach combines evidence-based practices with compassionate, personalized care. 
+          I believe every family deserves to feel empowered, informed, and supported throughout 
+          their pregnancy, birth, and postpartum journey.
+        </p>
+        <p>
+          Whether you're preparing for your first birth or welcoming another child, I'm here 
+          to provide the guidance, advocacy, and emotional support you need. My goal is to help 
+          you create a positive birth experience that honors your choices and values.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight">
+            <span class="highlight-icon">✨</span>
+            <span>Certified Doula</span>
+          </div>
+          <div class="highlight">
+            <span class="highlight-icon">💚</span>
+            <span>Evidence-Based Care</span>
+          </div>
+          <div class="highlight">
+            <span class="highlight-icon">🤱</span>
+            <span>Lactation Support</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <div class="image-placeholder">
+          <span>📸</span>
+          <p>Add Jaeda's photo here</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background-color: white;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--terracotta);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .about-text {
+    padding: 0 20px;
+  }
+
+  .about-intro {
+    font-size: 1.3rem;
+    color: var(--sage-green);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .about-text p {
+    margin-bottom: 20px;
+    color: var(--light-text);
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+
+  .about-highlights {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+
+  .highlight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    background-color: var(--cream);
+    border-radius: 10px;
+    color: var(--dark-text);
+    font-weight: 500;
+  }
+
+  .highlight-icon {
+    font-size: 1.5rem;
+  }
+
+  .about-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 3/4;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--sage-green) 100%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-placeholder p {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  @media (max-width: 968px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .about-text {
+      padding: 0 16px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .about-highlights {
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .about-text {
+      padding: 0 24px;
+    }
+  }
+</style>
