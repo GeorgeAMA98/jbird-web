@@ -216,15 +216,12 @@ section {
 }
 
 .hero-image img {
-  max-width: 85%;
+  max-width: 100%;
   height: auto;
   width: 100%;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(107, 139, 122, 0.2);
   transition: transform 0.3s ease;
-  opacity: 0.55;
-  mix-blend-mode: multiply;
-  filter: brightness(0.75) contrast(1.1) saturate(1.2);
 }
 
 @media (max-width: 968px) {
@@ -616,7 +613,7 @@ section {
 .leaf {
   position: absolute;
   color: var(--sage-green);
-  opacity: 0.3;
+  opacity: 0.5;
   font-size: 2rem;
   pointer-events: none;
   animation: float 6s ease-in-out infinite;
