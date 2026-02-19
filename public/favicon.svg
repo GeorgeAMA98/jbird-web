@@ -1,7 +1,0 @@
-<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="32" cy="32" r="30" fill="#C77B5C" />
-  <circle cx="32" cy="32" r="20" fill="#8B9D83" />
-  <circle cx="32" cy="32" r="10" fill="#F5EBE0" />
-  <!-- Bird silhouette -->
-  <path d="M 20 25 Q 25 20, 30 25 Q 35 20, 40 25 Q 38 30, 35 28 Q 32 30, 30 28 Q 27 30, 24 28 Q 22 30, 20 25 Z" fill="#F5EBE0" />
-</svg>

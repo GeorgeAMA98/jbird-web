@@ -1,18 +1,6 @@
 {
-  "name": "jbird-doula-site",
-  "type": "module",
+  "name": "jbird-web",
   "version": "1.0.0",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^4.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0"
-  }
+  "private": true,
+  "description": "JBird Nesting Services - static site for GitHub Pages"
 }

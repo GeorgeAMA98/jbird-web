@@ -1,133 +1,51 @@
-# 🐦 JBird Nesting Services - Website
+# JBird Nesting Services
 
-A beautiful, professional website for Jaeda's doula business, built with Astro and optimized for Cloudflare Pages.
+A simple, professional static website for Jaeda's doula business. Ready for **GitHub Pages**—no build step required.
 
-## 🎨 Design
+## What’s included
 
-**Color Palette:**
-- Terracotta: `#C77B5C` (warm, nurturing)
-- Sage Green: `#8B9D83` (calming, natural)
-- Cream: `#F5EBE0` (soft, inviting)
+- **index.html** – Single-page site (Hero, About, Services, Contact, Footer)
+- **styles.css** – All styles (responsive, same look as before)
+- **favicon.svg**, **hero-splash.svg** – Assets in the repo root
+- **.nojekyll** – So GitHub Pages serves the site as plain static files
 
-## 🚀 Quick Start
+## Run locally
 
-### Prerequisites
-
-- Node.js 18+ and npm (or pnpm/yarn)
-
-### Installation
+Open `index.html` in a browser, or use a local server:
 
 ```bash
-npm install
+# Python
+python3 -m http.server 8000
+
+# or npx (no install)
+npx serve
 ```
 
-### Development
+Then visit `http://localhost:8000` (or the URL shown).
 
-```bash
-npm run dev
-```
+## Deploy to GitHub Pages
 
-Visit `http://localhost:4321` to see your site.
+1. Push this repo to GitHub.
+2. **Settings → Pages**
+3. Under **Source**, choose **Deploy from a branch**
+4. Branch: **main** (or your default), folder: **/ (root)**
+5. Save. The site will be at `https://<username>.github.io/<repo-name>/`
 
-### Build
+For a **user/org site** (`https://<username>.github.io`), use a repo named `<username>.github.io` and push the same files; the root is the site root.
 
-```bash
-npm run build
-```
+## Customize before going live
 
-The built site will be in the `dist/` folder.
+- **Contact:** Update email and phone in `index.html` (contact section and footer).
+- **Location:** Change “San Jose & Bay Area” in the contact section if needed.
+- **About photo:** Replace the placeholder block in the About section with an `<img>` pointing to a photo (e.g. in the repo or from a URL).
+- **Contact form:** The form has `action="#"`. To make it work, use a service like [Formspree](https://formspree.io) or similar and set the form `action` to the URL they give you.
 
-### Preview Production Build
+## Design
 
-```bash
-npm run preview
-```
-
-## 📁 Project Structure
-
-```
-├── public/
-│   ├── hero-splash.svg          # Main hero image
-│   ├── hero-splash-alt.svg      # Alternative hero image
-│   └── favicon.svg               # Site favicon
-├── src/
-│   ├── components/
-│   │   ├── Header.astro         # Navigation header
-│   │   ├── Hero.astro           # Hero section
-│   │   ├── About.astro          # About section
-│   │   ├── Services.astro       # Services section
-│   │   ├── Contact.astro        # Contact form
-│   │   └── Footer.astro         # Footer
-│   ├── layouts/
-│   │   └── Layout.astro         # Main page layout
-│   └── pages/
-│       └── index.astro          # Homepage
-├── astro.config.mjs             # Astro configuration
-└── package.json                 # Dependencies
-```
-
-## ✏️ Customization Guide
-
-### Must Update Before Launch
-
-1. **Contact Email** (`src/components/Contact.astro` and `src/components/Footer.astro`)
-   - Replace `jaeda@jbirdnesting.com` with the actual email
-
-2. **Phone Number** (`src/components/Contact.astro`)
-   - Update the placeholder phone number
-
-3. **Location** (`src/components/Contact.astro`)
-   - Update "San Jose & Bay Area" if needed
-
-### Optional Updates
-
-1. **Add Jaeda's Photo**
-   - Replace the placeholder in `src/components/About.astro`
-   - Update the `.image-placeholder` div with an `<img>` tag
-
-2. **Swap Hero Images**
-   - In `src/components/Hero.astro`, change `/hero-splash.svg` to `/hero-splash-alt.svg`
-
-3. **Service Descriptions**
-   - Edit the `services` array in `src/components/Services.astro`
-
-4. **Social Media Links**
-   - Add social media icons/links to the Footer component
-
-5. **Contact Form Integration**
-   - Currently the form is static. To make it functional:
-     - Use a service like Formspree, Netlify Forms, or Cloudflare Workers
-     - Update the form action in `src/components/Contact.astro`
-
-## 🌐 Deployment
-
-See `DEPLOYMENT.md` for detailed deployment instructions to Cloudflare Pages.
-
-## 📝 Features
-
-- ✅ Fully responsive design
-- ✅ SEO optimized
-- ✅ Fast loading (Astro's static generation)
-- ✅ Modern, professional design
-- ✅ Accessible markup
-- ✅ Ready for Cloudflare Pages
-
-## 🛠️ Technology Stack
-
-- **Astro** - Modern web framework
-- **Cloudflare Pages** - Hosting platform
-- **SVG** - Scalable graphics
-
-## 📚 Resources
-
-- [Astro Documentation](https://docs.astro.build)
-- [Cloudflare Pages Documentation](https://developers.cloudflare.com/pages)
-- [Deployment Guide](./DEPLOYMENT.md)
-
-## 💝 Notes
-
-This website was built with love for Jaeda's doula business. The nesting theme runs throughout the design, representing layers of support and care.
+- **Terracotta:** `#C77B5C`
+- **Sage green:** `#8B9D83`
+- **Cream:** `#F5EBE0`
 
 ---
 
-Built with ❤️ for JBird Nesting Services
+Built with love for JBird Nesting Services.
