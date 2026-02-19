@@ -222,6 +222,8 @@ section {
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(107, 139, 122, 0.2);
   transition: transform 0.3s ease;
+  opacity: 0.85;
+  mix-blend-mode: multiply;
 }
 
 @media (max-width: 968px) {
