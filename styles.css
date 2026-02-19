@@ -1,10 +1,12 @@
 /* Layout & base */
 :root {
-  --terracotta: #C77B5C;
-  --sage-green: #8B9D83;
-  --cream: #F5EBE0;
+  --terracotta: #9B8B6F;
+  --sage-green: #7A9B7F;
+  --cream: #F5F0E8;
   --dark-text: #2C2C2C;
   --light-text: #5A5A5A;
+  --soft-beige: #E8DFD5;
+  --dark-green: #6B8B7A;
 }
 
 * {
@@ -131,7 +133,7 @@ section {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, var(--cream) 0%, #F9F4EF 100%);
+  background: linear-gradient(135deg, var(--cream) 0%, var(--soft-beige) 100%);
   padding: 100px 0;
   min-height: 600px;
   display: flex;
@@ -140,14 +142,14 @@ section {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.1fr;
   gap: 60px;
   align-items: center;
 }
 
 .hero-title {
   font-size: 3.5rem;
-  color: var(--terracotta);
+  color: var(--dark-green);
   margin-bottom: 20px;
   font-weight: 700;
   line-height: 1.1;
@@ -186,24 +188,24 @@ section {
 }
 
 .btn-primary {
-  background-color: var(--terracotta);
+  background-color: var(--sage-green);
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #B5694A;
+  background-color: var(--dark-green);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(199, 123, 92, 0.3);
+  box-shadow: 0 5px 15px rgba(122, 155, 127, 0.3);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--terracotta);
-  border: 2px solid var(--terracotta);
+  color: var(--sage-green);
+  border: 2px solid var(--sage-green);
 }
 
 .btn-secondary:hover {
-  background-color: var(--terracotta);
+  background-color: var(--sage-green);
   color: white;
 }
 
@@ -217,6 +219,9 @@ section {
   max-width: 100%;
   height: auto;
   width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(107, 139, 122, 0.2);
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 968px) {
@@ -254,12 +259,12 @@ section {
 
 /* About */
 .about {
-  background-color: white;
+  background: linear-gradient(to bottom, var(--cream), var(--soft-beige));
 }
 
 .section-title {
   font-size: 2.5rem;
-  color: var(--terracotta);
+  color: var(--dark-green);
   margin-bottom: 30px;
   text-align: center;
 }
@@ -301,10 +306,11 @@ section {
   align-items: center;
   gap: 10px;
   padding: 15px 20px;
-  background-color: var(--cream);
+  background-color: var(--dark-green);
   border-radius: 10px;
-  color: var(--dark-text);
+  color: white;
   font-weight: 500;
+  box-shadow: 0 5px 15px rgba(107, 139, 122, 0.15);
 }
 
 .highlight-icon {
@@ -361,7 +367,7 @@ section {
 
 /* Services */
 .services {
-  background: linear-gradient(180deg, white 0%, var(--cream) 100%);
+  background: linear-gradient(to bottom, var(--soft-beige), var(--cream));
 }
 
 .section-subtitle {
@@ -383,14 +389,15 @@ section {
 .service-card {
   background-color: white;
   padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
+  border-top: 4px solid var(--sage-green);
+  box-shadow: 0 5px 20px rgba(122, 155, 127, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 35px rgba(107, 139, 122, 0.15);
 }
 
 .service-icon {
@@ -401,7 +408,7 @@ section {
 
 .service-title {
   font-size: 1.5rem;
-  color: var(--terracotta);
+  color: var(--dark-green);
   margin-bottom: 15px;
   text-align: center;
 }
@@ -445,7 +452,7 @@ section {
 
 /* Contact */
 .contact {
-  background-color: white;
+  background: linear-gradient(to bottom, var(--cream), var(--soft-beige));
 }
 
 .contact-content {
@@ -473,7 +480,7 @@ section {
 }
 
 .info-item h3 {
-  color: var(--terracotta);
+  color: var(--dark-green);
   margin-bottom: 8px;
   font-size: 1.2rem;
 }
@@ -538,7 +545,7 @@ section {
 
 /* Footer */
 .footer {
-  background-color: var(--sage-green);
+  background-color: var(--dark-green);
   color: white;
   padding: 60px 0 20px;
   margin-top: 80px;
