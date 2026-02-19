@@ -222,7 +222,7 @@ section {
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(107, 139, 122, 0.2);
   transition: transform 0.3s ease;
-  opacity: 0.85;
+  opacity: 0.55;
   mix-blend-mode: multiply;
 }
 
@@ -609,4 +609,77 @@ section {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+}
+
+/* Decorative Leaves */
+.leaf {
+  position: absolute;
+  color: var(--sage-green);
+  opacity: 0.3;
+  font-size: 2rem;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
+
+.leaf.leaf-1 {
+  top: 10%;
+  left: 5%;
+  font-size: 2.5rem;
+  animation-delay: 0s;
+  transform: rotate(-25deg);
+}
+
+.leaf.leaf-2 {
+  top: 25%;
+  right: 8%;
+  font-size: 1.8rem;
+  animation-delay: 1s;
+  transform: rotate(35deg);
+}
+
+.leaf.leaf-3 {
+  top: 50%;
+  left: 3%;
+  font-size: 2rem;
+  animation-delay: 2s;
+  transform: rotate(-45deg);
+}
+
+.leaf.leaf-4 {
+  top: 65%;
+  right: 5%;
+  font-size: 2.3rem;
+  animation-delay: 1.5s;
+  transform: rotate(20deg);
+}
+
+.leaf.leaf-5 {
+  bottom: 15%;
+  left: 7%;
+  font-size: 1.9rem;
+  animation-delay: 3s;
+  transform: rotate(-10deg);
+}
+
+.leaf.leaf-6 {
+  bottom: 25%;
+  right: 6%;
+  font-size: 2.2rem;
+  animation-delay: 2.5s;
+  transform: rotate(45deg);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Position leaves within sections */
+section {
+  position: relative;
+  overflow: hidden;
 }
