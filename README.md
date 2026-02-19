@@ -2,7 +2,7 @@
 
 A simple, professional static website for Jaeda's doula business. Ready for **GitHub Pages**—no build step required.
 
-https://georgeama98.github.io/jbird-web/
+https://jbird.help
 
 ## What’s included
 
@@ -51,4 +51,5 @@ For a **user/org site** (`https://<username>.github.io`), use a repo named `<use
 ---
 
 Built with love for JBird Nesting Services.
+
 
