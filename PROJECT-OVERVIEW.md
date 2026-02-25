@@ -121,7 +121,7 @@ jbird-doula-site/
 ├── public/             # Images and static files
 │   ├── hero-splash.svg
 │   ├── hero-splash-alt.svg
-│   └── favicon.svg
+│   └── Jbird Logo - Bird 1.png
 ├── README.md           # Full documentation
 ├── DEPLOYMENT.md       # Step-by-step deployment guide
 └── package.json        # Project dependencies

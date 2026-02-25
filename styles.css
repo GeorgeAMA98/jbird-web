@@ -95,7 +95,10 @@ section {
 }
 
 .logo-icon {
-  font-size: 1.8rem;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
 }
 
 .logo-text {
@@ -138,20 +141,56 @@ section {
   min-height: 600px;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('IMG_6992.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
-  gap: 60px;
+  gap: 56px;
   align-items: center;
 }
 
+.hero-media {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 36px rgba(107, 139, 122, 0.2);
+}
+
+.hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text {
+  padding-left: 10px;
+}
+
 .hero-title {
+  font-family: 'Parisienne', cursive;
   font-size: 3.5rem;
   color: var(--dark-green);
   margin-bottom: 20px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.1;
 }
 
@@ -220,26 +259,17 @@ section {
   box-shadow: 0 5px 15px rgba(155, 139, 111, 0.3);
 }
 
-.hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(107, 139, 122, 0.2);
-  transition: transform 0.3s ease;
-}
-
 @media (max-width: 968px) {
   .hero-content {
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
+  }
+  .hero-media {
+    margin: 0 auto;
+  }
+  .hero-text {
+    padding-left: 0;
   }
   .hero-title {
     font-size: 2.5rem;
@@ -305,6 +335,23 @@ section {
   font-size: 1.05rem;
 }
 
+.who-support-title {
+  color: var(--dark-green);
+  margin: 26px 0 12px;
+  font-size: 1.5rem;
+}
+
+.who-support-list {
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin: 0 0 20px;
+}
+
+.who-support-list li {
+  margin-bottom: 10px;
+  color: var(--dark-text);
+}
+
 .about-highlights {
   display: flex;
   gap: 30px;
@@ -329,8 +376,39 @@ section {
 }
 
 .about-image {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+}
+
+.about-photo {
+  position: absolute;
+  width: 56%;
+  aspect-ratio: 3/4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.about-photo-primary {
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.about-photo-secondary {
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .image-placeholder {
@@ -417,6 +495,16 @@ section {
   text-align: center;
 }
 
+.service-icon img {
+  width: 100%;
+  max-width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
 .service-title {
   font-size: 1.5rem;
   color: var(--dark-green);
@@ -468,9 +556,10 @@ section {
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 380px));
   gap: 30px;
   margin-top: 50px;
+  justify-content: center;
 }
 
 .testimonial-card {
@@ -489,17 +578,26 @@ section {
 
 .testimonial-header {
   display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 18px;
+  align-items: flex-start;
 }
 
 .testimonial-avatar {
-  font-size: 3rem;
-  min-width: 50px;
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .testimonial-info {
@@ -509,7 +607,7 @@ section {
 }
 
 .testimonial-name {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--dark-green);
   margin: 0;
   font-weight: 600;
@@ -544,7 +642,7 @@ section {
     padding: 25px;
   }
   .testimonial-avatar {
-    font-size: 2.5rem;
+    height: 190px;
   }
 }
 
@@ -558,6 +656,16 @@ section {
   grid-template-columns: 1fr 1.5fr;
   gap: 60px;
   margin-top: 50px;
+}
+
+.contact-closing-text {
+  margin-top: -20px;
+}
+
+.contact-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
 }
 
 .contact-info {

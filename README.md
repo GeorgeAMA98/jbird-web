@@ -8,7 +8,7 @@ https://jbird.help
 
 - **index.html** – Single-page site (Hero, About, Services, Contact, Footer)
 - **styles.css** – All styles (responsive, same look as before)
-- **favicon.svg**, **hero-splash.svg** – Assets in the repo root
+- **Jbird Logo - Bird 1.png**, **hero-splash.svg** – Assets in the repo root
 - **.nojekyll** – So GitHub Pages serves the site as plain static files
 
 ## Run locally
