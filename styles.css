@@ -31,6 +31,20 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+  background-image: url('Jbird Logo - Bird 1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: sepia(1) saturate(4.8) brightness(0.72) contrast(1.08);
+  vertical-align: middle;
+}
+
 a {
   color: var(--terracotta);
   text-decoration: none;
@@ -771,6 +785,10 @@ section {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: white;
+}
+
+.footer-logo::before {
+  content: none;
 }
 
 .footer-tagline {
