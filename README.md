@@ -25,6 +25,35 @@ npx serve
 
 Then visit `http://localhost:8000` (or the URL shown).
 
+## Verify Google Analytics (Realtime)
+
+After adding the Google tag to `index.html`, confirm tracking is working:
+
+1. Open your site in a browser (`https://jbird.help` or local URL).
+2. In another tab, open Google Analytics for this property.
+3. Go to **Reports → Realtime**.
+4. Browse a few sections on your site (scroll, click links, stay active for ~30 seconds).
+5. Confirm at least one active user appears in Realtime.
+
+If nothing appears after 1–2 minutes:
+
+- Turn off ad blockers/privacy extensions for your site.
+- Test in an incognito/private window.
+- Double-check the measurement ID in the script is `G-NFZHBWGF4N`.
+- Ensure only one Google tag snippet is present on the page.
+
+### Verify with DebugView (deeper check)
+
+Use DebugView when you want to confirm events in near real time:
+
+1. Open your site in Chrome.
+2. Open DevTools (`F12`) and keep it open while testing.
+3. In Google Analytics, go to **Admin → DebugView**.
+4. Refresh your site and navigate around (page load, clicks, scroll).
+5. Confirm you see incoming events such as `page_view` in DebugView.
+
+If DebugView is empty, test again in an incognito window with extensions disabled.
+
 ## Deploy to GitHub Pages
 
 1. Push this repo to GitHub.
