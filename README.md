@@ -54,6 +54,8 @@ Use DebugView when you want to confirm events in near real time:
 
 If DebugView is empty, test again in an incognito window with extensions disabled.
 
+Note: after first deployment or tag changes, it can take a few minutes before events consistently appear in Realtime/DebugView.
+
 ## Deploy to GitHub Pages
 
 1. Push this repo to GitHub.
