@@ -365,7 +365,7 @@ section {
 .about-quote {
   position: relative;
   margin: 32px 0;
-  padding: 26px 28px 26px 64px;
+  padding: 26px 64px 26px 64px;
   border-radius: 18px;
   background-color: #fffdf8;
   border-left: 5px solid var(--terracotta);
@@ -382,6 +382,17 @@ section {
   position: absolute;
   top: -6px;
   left: 16px;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--terracotta);
+  opacity: 0.6;
+}
+
+.about-quote::after {
+  content: "”";
+  position: absolute;
+  bottom: -38px;
+  right: 16px;
   font-size: 4.5rem;
   line-height: 1;
   color: var(--terracotta);
@@ -592,11 +603,16 @@ section {
     font-size: 1rem;
   }
   .about-quote {
-    padding: 22px 20px 22px 48px;
+    padding: 22px 48px 22px 48px;
     font-size: 1.15rem;
   }
   .about-quote::before {
     left: 10px;
+    font-size: 3.5rem;
+  }
+  .about-quote::after {
+    right: 10px;
+    bottom: -30px;
     font-size: 3.5rem;
   }
 }
@@ -732,6 +748,95 @@ section {
   }
   .service-card {
     padding: 30px 20px;
+  }
+}
+
+/* Comfort Tools */
+.comfort-tools {
+  background-color: var(--cream);
+}
+
+.comfort-bag-label {
+  text-align: center;
+  font-family: 'Parisienne', cursive;
+  font-size: 2rem;
+  color: var(--terracotta);
+  margin: -20px 0 30px;
+}
+
+.comfort-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.comfort-card {
+  background-color: white;
+  padding: 16px 16px 24px;
+  border-radius: 15px;
+  border-top: 4px solid var(--terracotta);
+  box-shadow: 0 5px 20px rgba(122, 155, 127, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comfort-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(107, 139, 122, 0.15);
+}
+
+.comfort-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.comfort-title {
+  font-size: 1.2rem;
+  color: var(--dark-green);
+  margin-bottom: 10px;
+}
+
+.comfort-title::before {
+  content: none;
+}
+
+.comfort-card p {
+  color: var(--light-text);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.comfort-closing {
+  max-width: 700px;
+  margin: 40px auto 0;
+  padding: 22px 28px;
+  border-radius: 18px;
+  background-color: #fffdf8;
+  border: 1.5px dashed rgba(155, 139, 111, 0.5);
+  text-align: center;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--dark-green);
+}
+
+@media (max-width: 968px) {
+  .comfort-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .comfort-grid {
+    grid-template-columns: 1fr;
+  }
+  .comfort-bag-label {
+    font-size: 1.7rem;
   }
 }
 
